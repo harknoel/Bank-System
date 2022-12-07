@@ -1,8 +1,7 @@
 public class Main {
     public static void main(String[] args) {
-        // Create a new Account and a new BankFacade
-        Account account = new Account(12345678, 1000);
-        BankFacade bankFacade = new BankFacade(account);
+        // Create a new BankFacade
+        BankFacade bankFacade = new BankFacade(12345678, 1000);
 
         // Use the BankFacade to deposit and withdraw money from the account
         bankFacade.deposit(500);

@@ -4,8 +4,8 @@ public class BankFacade {
     private Account account;
 
     // Constructor for the BankFacade class
-    public BankFacade(Account account) {
-        this.account = account;
+    public BankFacade(int accountNumber, double balance) {
+        account = new Account(accountNumber, balance);
     }
 
     // Method to deposit money into the account
