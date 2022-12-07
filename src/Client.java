@@ -1,4 +1,4 @@
-public class Main {
+public class Client {
     public static void main(String[] args) {
         // Create a new BankFacade
         BankFacade bankFacade = new BankFacade(12345678, 1000);
