@@ -31,7 +31,7 @@ public class BankFacade {
 
     public void transfer(Account from, Account to, double amount) throws Exception {
         if (this.transferSubsystem == null) {
-            throw new Exception("Sending Error");
+            throw new Exception("Sender must be your account.");
         }
         transferSubsystem.transfer(from, to, amount);
     }
