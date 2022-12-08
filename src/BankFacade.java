@@ -29,7 +29,11 @@ public class BankFacade {
         return this.account.getBalance();
     }
 
+    // Method to transfer an amount to another account
     public void transfer(Account from, Account to, double amount) throws Exception {
+        if (from == to) {
+            throw new Exception("Cannot transfer money to the same account");
+        }
         if (this.transferSubsystem == null) {
             throw new Exception("Sender must be your account.");
         }

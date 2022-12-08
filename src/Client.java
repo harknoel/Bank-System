@@ -14,7 +14,8 @@ public class Client {
             client1.transfer(client1.getAccount(), client2.getAccount(), 500);
             System.out.println(client1.getBalance());
             System.out.println(client2.getBalance());
-            client2.transfer(client1.getAccount(), client2.getAccount(), 500);
+//            client2.transfer(client1.getAccount(), client2.getAccount(), 500);
+            client2.transfer(client2.getAccount(), client2.getAccount(), 500);
         } catch (Exception e) {
             System.err.println(e.getMessage());
         }
