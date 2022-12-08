@@ -24,4 +24,8 @@ public class BankFacade {
     public double getBalance() {
         return this.account.getBalance();
     }
+
+    public void transfer(Account from, Account to, double amount) throws Exception {
+        transferSubsystem.transfer(from, to, amount);
+    }
 }
