@@ -2,6 +2,7 @@
 public class BankFacade {
     // The account associated with the BankFacade
     private Account account;
+    private BankTransfer transferSubsystem;
 
     // Constructor for the BankFacade class
     public BankFacade(int accountNumber, double balance) {
@@ -11,6 +12,7 @@ public class BankFacade {
     // Method to deposit money into the account
     public void deposit(double amount) {
         this.account.deposit(amount);
+        this.transferSubsystem = new BankTransfer();
     }
 
     // Method to withdraw money from the account
