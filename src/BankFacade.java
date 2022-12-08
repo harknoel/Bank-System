@@ -9,6 +9,10 @@ public class BankFacade {
         account = new Account(accountNumber, balance);
     }
 
+    public Account getAccount() {
+        return account;
+    }
+
     // Method to deposit money into the account
     public void deposit(double amount) {
         this.account.deposit(amount);
@@ -26,6 +30,9 @@ public class BankFacade {
     }
 
     public void transfer(Account from, Account to, double amount) throws Exception {
+        if (this.transferSubsystem == null) {
+            throw new Exception("Sending Error");
+        }
         transferSubsystem.transfer(from, to, amount);
     }
 }
