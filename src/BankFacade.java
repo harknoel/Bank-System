@@ -6,7 +6,8 @@ public class BankFacade {
 
     // Constructor for the BankFacade class
     public BankFacade(int accountNumber, double balance) {
-        account = new Account(accountNumber, balance);
+        this.account = new Account(accountNumber, balance);
+        this.transferSubsystem = new BankTransfer();
     }
 
     public Account getAccount() {
@@ -16,7 +17,6 @@ public class BankFacade {
     // Method to deposit money into the account
     public void deposit(double amount) {
         this.account.deposit(amount);
-        this.transferSubsystem = new BankTransfer();
     }
 
     // Method to withdraw money from the account
